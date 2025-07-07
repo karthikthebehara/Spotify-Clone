@@ -1,0 +1,164 @@
+[
+    {
+        "folder": "Aanand",
+        "title": "Aanand",
+        "description": "Manchi Coffe lanti cinema",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Attarintiki-Daredi",
+        "title": "Atharintiki Daredi",
+        "description": "Pawan Kalyan Samanta Trivikram ",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Chennai-Express",
+        "title": "Chennai Express",
+        "description": "Hero Went to chennai for heroine",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Dhamaka",
+        "title": "Dhamaka",
+        "description": "Raviteja Sreeleela",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Gangleader",
+        "title": "Gang Leadrer",
+        "description": "Industry Hit",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Geetha-Govindam",
+        "title": "Geetha Govindam",
+        "description": "Vijay Devarakonda, Rashmika Mandanna",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Ismart-Shankar",
+        "title": "Ismart Shankar",
+        "description": "Ram Nidhi agarwal, Naha natesh",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Jalsa",
+        "title": "Jalsa",
+        "description": "Pawan Kalyan, Iliana, Trivikram Srinivas",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Janatha-Garrage",
+        "title": "Janatha Garrage",
+        "description": "For environment saftey",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Katamarayudu",
+        "title": "Katama Rayudu",
+        "description": "Pawan Kalyan, Sruthi Hassan",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Loversday",
+        "title": "Lovers Day",
+        "description": "Teenage Love",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Lovestory",
+        "title": "Lovestory",
+        "description": "Naga Chaithanya, Sai Pallavi",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Master",
+        "title": "Mirchi",
+        "description": "Vijay Thalapathi, Malavika Manohan",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Mirchi",
+        "title": "Mirchi",
+        "description": "Prabhas, Anushka, Koratala Shiva",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Premakavali",
+        "title": "Prema Kavali",
+        "description": "Aadi Saikumar, Isha Chawla",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Rangasthalam",
+        "title": "Rangasthalam",
+        "description": "Ram Charan, Samantha, Sukumar",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Rangde",
+        "title": "Rang De",
+        "description": "Nithin, Keerthi Suresh",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Rx100",
+        "title": "RX 100",
+        "description": "Siva Karthikeya, Payal Rajput",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "saaho",
+        "title": "Saaho",
+        "description": "Prabhas, Shradha Kapoor, Sujith",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Sakhi",
+        "title": "Sakhi",
+        "description": "Madhavan, Shalini",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Sarainodu",
+        "title": "Sarainodu",
+        "description": "Allu Arjun, Rakul Preethsingh, Boyapati Seenu",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Sarileru-Neekevvaru",
+        "title": "Sarileru Neekevvaru",
+        "description": "Mahesh Babu, Rashmika MAndanna ,Anil Ravipudi",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Seventh-sense",
+        "title": "Seventh Sense",
+        "description": "Surya, Shruthi Hassan",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Shiridisai",
+        "title": "Shiridi Sai",
+        "description": "Nagarjun a   mythological drana",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "SoSathyamurthi",
+        "title": "S/O SoSathyamurthi",
+        "description": "Allu Arjun, Samantha, Trivikram Srinivas",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Teenmar",
+        "title": "Teenmar",
+        "description": "Pawan Kalyan, Thisha, Trivikram Srinivas",
+        "image": "cover.jpg"
+    },
+    {
+        "folder": "Uppena",
+        "title": "Uppena",
+        "description": "Vaishnav Tej, Krithi Shetty, BUchi Babu Sana",
+        "image": "cover.jpg"
+    }
+]

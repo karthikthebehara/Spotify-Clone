@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="top border">
+        <div class="left-nav">
+            <!-- <img src="assets/images/hamburger.svg" alt=""> -->
+
+            <ul>
+                <li class="exclude"> <img class="hamburger" src="assets/images/hamburger.svg" alt=""></li>
+                <li class="exclude"><img src="assets/images/logo.svg" alt=""></li>
+                <li><img src="assets/images/home.svg" alt=""></li>
+                <li>
+                    <div class="search-wrapper">
+                        <a href=""><img src="assets/images/search.svg" alt="" class="icon "></a>
+                        <input type="text" placeholder="    What do you want to play?">
+                        <a href=""><img src="assets/images/browse.svg" alt="" class="icon "></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right-nav">
+
+            <ul class="font">
+
+
+                <li><a href="">Premium</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Download</a></li>
+                <li><a href="">Install App</a></li>
+                <li><a href="">Sign up</a></li>
+                <li><button>Log in</button></li>
+            </ul>
+        </div>
+        <img class="user" src="assets/images/user.svg" alt="">
+
+    </div>
+    <div class="main border">
+        <div class="left">
+            <div class="heading">
+                <h2>Your Library</h2>
+
+            </div>
+            <div class="song-list">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="footer">
+
+                <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety &amp; Privacy
+                            Center</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+
+            </div>
+        </div>
+        <div class="right border">
+            <div class="trending-songs">
+                <h1>Trending Songs</h1>
+                <div class="card-container">
+                    
+                    
+
+
+                </div>
+                <div class="playbar">
+                    <div class="abovebar">
+                        <div class="songinfo">
+                            <!-- Song Info -->
+                        </div>
+                        <div class="songbuttons">
+                            <img width="30px" id="previous" src="assets/images/prevsong.svg" alt="">
+                            <img width="30px" id="play" src="assets/images/play.svg" alt="">
+                            <img width="30px" id="next" src="assets/images/nextsong.svg" alt="">
+                        </div>
+                        <div class="timevol">
+
+                            <div class="songtime">
+                                <!-- 0:00 / 3:45 -->
+                            </div>
+                            <div class="volume">
+                                <img src="assets/images/volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
