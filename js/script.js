@@ -117,7 +117,7 @@ async function displayAlbums() {
 
 
 async function main() {
-    await getSongs("cs")
+    await getSongs("Aanand");
     playMusic(songs[0], true);
 
     //diaply all the albums on the page
