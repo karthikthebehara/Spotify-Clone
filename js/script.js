@@ -1,8 +1,10 @@
 
 let currentSong;
 currentSong = new Audio();
+currentSong.preload = "metadata";
 let songs;
 let currFolder;
+let currentSongIndex = 0;
 
 
 function formatTime(seconds) {
@@ -66,19 +68,22 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = `/assets/songs/${currFolder}/` + track;
-    if (!pause) {
-        currentSong.play();
-        play.src = "assets/images/pause.svg";
-    }
-    play.src = "assets/images/pause.svg"
-    document.querySelector(".songinfo").innerHTML = decodeURI(track);
-    document.querySelector(".songtime").innerHTML = "00:00/00:00";
+    currentSongIndex = songs.indexOf(track); // ✅ store index here
 
+    currentSong.src = `/assets/songs/${currFolder}/${track}`;
+    currentSong.preload = "metadata";
 
+    currentSong.onloadedmetadata = () => {
+        if (!pause) {
+            currentSong.play();
+            play.src = "assets/images/pause.svg";
+        }
 
-
+        document.querySelector(".songinfo").innerHTML = decodeURI(track);
+        document.querySelector(".songtime").innerHTML = `00:00 / ${formatTime(currentSong.duration)}`;
+    };
 };
+
 
 async function displayAlbums() {
     console.log("Displaying albums");
@@ -98,7 +103,8 @@ async function displayAlbums() {
                             stroke-linejoin="round" />
                     </svg>
                 </div>
-                <img src="assets/songs/${album.folder}/${album.image}" alt="${album.title}">
+                <img loading="lazy" src="assets/songs/${album.folder}/${album.image}" alt="${album.title}">
+
                 <h2>${album.title}</h2>
                 <p>${album.description}</p>
             </div>`;
@@ -179,19 +185,19 @@ async function main() {
 
     // add even listner for previous and next
     previous.addEventListener("click", () => {
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-
-        if ((index - 1) >= 0) {
-            playMusic(songs[index - 1])
+        if (currentSongIndex > 0) {
+            currentSongIndex--; // ⬅️ decrement index
+            playMusic(songs[currentSongIndex]);
         }
-    })
+    });
+
     next.addEventListener("click", () => {
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-
-        if ((index + 1) < songs.length) {
-            playMusic(songs[index + 1])
+        if (currentSongIndex < songs.length - 1) {
+            currentSongIndex++; // ⬅️ increment index
+            playMusic(songs[currentSongIndex]);
         }
-    })
+    });
+
 
 
     //add an event listner for volume
