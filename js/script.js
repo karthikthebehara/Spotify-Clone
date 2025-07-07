@@ -20,66 +20,51 @@ function formatTime(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/assets/songs/${folder}/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    songs = [];
 
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1])
-        }
-    }
+    // ✅ Load songs from songs.json
+    let a = await fetch(`/assets/songs/${folder}/songs.json`);
+    songs = await a.json();
 
-
-
-
-    //show all the songs in the playlist
+    // Show all the songs in the playlist
     let songUL = document.querySelector(".song-list").getElementsByTagName("ul")[0];
     songUL.innerHTML = "";
+
     for (const song of songs) {
         const decoded = decodeURIComponent(song);
 
         const cleanName = decoded
-            .replace(/\[.*?\]/g, '')              // ✅ Remove [iSongs.info]
-            .replace(/^\s*\d+\s*[-.]\s*/, '')     // ✅ Remove leading numbers with dash/dot like "01 - "
-            .replace(/\(.*?\)/g, '')              // Remove (anything)
-            .replace(/320kbps/ig, '')             // Remove 320kbps text
-            .replace(/\.mp3$/i, '')               // Remove .mp3 extension
-            .replace(/_/g, ' ')                   // Replace underscores with space
+            .replace(/\[.*?\]/g, '')
+            .replace(/^\s*\d+\s*[-.]\s*/, '')
+            .replace(/\(.*?\)/g, '')
+            .replace(/320kbps/ig, '')
+            .replace(/\.mp3$/i, '')
+            .replace(/_/g, ' ')
             .trim();
 
-
         songUL.innerHTML += `<li>  
-        <img class="music-icon" src="assets/images/music.svg" alt="">
-        <div class="info">
-            <div data-file="${song}">${cleanName}</div>
-            <div>Karthik</div>
-        </div>
-        <div class="play-now">
-            <span>Play now</span>
-            <img src="assets/images/play copy.svg" alt="">
-        </div>
-    </li>`;
+            <img class="music-icon" src="assets/images/music.svg" alt="">
+            <div class="info">
+                <div data-file="${song}">${cleanName}</div>
+                <div>Karthik</div>
+            </div>
+            <div class="play-now">
+                <span>Play now</span>
+                <img src="assets/images/play copy.svg" alt="">
+            </div>
+        </li>`;
     }
 
-
-
-
-    //play the song
+    // play the song
     Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             const actualFile = e.querySelector(".info div").dataset.file;
             playMusic(actualFile);
         });
-
-    })
+    });
 
     return songs;
 }
+
 const playMusic = (track, pause = false) => {
     currentSong.src = `/assets/songs/${currFolder}/` + track;
     if (!pause) {
