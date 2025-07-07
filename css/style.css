@@ -382,7 +382,7 @@ body {
 
 .playbar {
     position: sticky;
-    bottom: 0px;
+    bottom: 20px;
     margin: 0 auto;
     left: 0;
     right: 0;
